@@ -14,11 +14,9 @@ public class TicTacToe extends JFrame{
 
     private int[] matrix = {2,2,2,2,2,2,2,2,2};
 
-    private JButton s1, s2, s3, s4, s5, s6, s7, s8, s9;
+    private final JButton[] gridButtons;
 
     private int moveCount;
-
-    JButton[] gridButtons = {s1, s2, s3, s4, s5, s6, s7, s8, s9};
 
     private JPanel panel;
 
@@ -30,15 +28,17 @@ public class TicTacToe extends JFrame{
     }
 
     public TicTacToe(){ // Primary constructor
-        s1 = new JButton("");
-        s2 = new JButton("");
-        s3 = new JButton("");
-        s4 = new JButton("");
-        s5 = new JButton("");
-        s6 = new JButton("");
-        s7 = new JButton("");
-        s8 = new JButton("");
-        s9 = new JButton("");
+        gridButtons = new JButton[9];
+
+        gridButtons[0] = new JButton("");
+        gridButtons[1] = new JButton("");
+        gridButtons[2] = new JButton("");
+        gridButtons[3] = new JButton("");
+        gridButtons[4] = new JButton("");
+        gridButtons[5] = new JButton("");
+        gridButtons[6] = new JButton("");
+        gridButtons[7] = new JButton("");
+        gridButtons[8] = new JButton("");
 
         panel = new JPanel();
         panel.setLayout(new GridLayout(4,3));
